@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <title> Decimal 2 Binary</title>
+      <link rel="stylesheet" href="css/NewFile.css">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </head>
+   <body>
+    <div class="wrap center"> <!-- Just to center ver and hor -->
+  <div class="wrap-label">
+     <label for="name"></label>
+     <p class="iconicfill-pen-alt2"><i class="fas fa-pencil-alt"></i></p>
+  </div>
+     <input type="number" placeholder="Decimal" id="dec"><br>
+
+     <button type="button" class="btn btn-dark" onclick="dec2bin();">Convert</button><br><br>
+       <input type="number" placeholder="Binary" id="bin"><br>
+       </div>
+      <script>
+          function dec2bin() {
+              var numIn = document.getElementById("dec").value;
+              var numOut = ((numIn >>> 0).toString(2));
+              document.getElementById("bin").value = numOut;
+              
+          }
+      </script>
+   </body>
+   
+</html>
